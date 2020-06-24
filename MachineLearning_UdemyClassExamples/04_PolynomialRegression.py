@@ -32,7 +32,7 @@ lr_poly.fit(X_poly,y)
 # plt.ylabel('Salary')
 # plt.show()
 
-# # Visualize Polynomial Regression results
+# # Visualize Polynomial Regression results. Higher res
 # X_grid = np.arange(min(X), max(X), 0.1)
 # X_grid = X_grid.reshape((len(X_grid),1))
 # plt.scatter(X, y, color = 'red')
@@ -43,5 +43,7 @@ lr_poly.fit(X_poly,y)
 # plt.show()
 
 # Predict new result
-print lr.predict([[6.5]])
-print lr_poly.predict(pr.fit_transform([[6.5]]))
+# print lr.predict([[6.5]])
+# print lr_poly.predict(pr.fit_transform([[6.5]]))
+
+# Evaluate the Model performance

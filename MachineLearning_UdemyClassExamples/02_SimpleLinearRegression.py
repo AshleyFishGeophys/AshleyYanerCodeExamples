@@ -57,3 +57,7 @@ plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
+
+# Evaluate the Model performance
+from sklearn.metrics import r2_score
+print r2_score(y_test, y_test_predict)
