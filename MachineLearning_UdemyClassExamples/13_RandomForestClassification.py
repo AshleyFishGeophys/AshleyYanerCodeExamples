@@ -23,17 +23,17 @@ X_test = sc.transform(X_test)
 
 # train model
 from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier(random_state=0)
+classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state=0)
 classifier.fit(X_train, y_train)
 
 # predict
 y_pred = classifier.predict(X_test)
-print classifier.predict(sc.transform([[31,94000]]))
+print classifier.predict(sc.transform([[31,98000]]))
 
 # metrics
 from sklearn.metrics import confusion_matrix, accuracy_score
-print confusion_matrix(y_pred, y_test)
-print accuracy_score(y_pred,y_test)
+print confusion_matrix(y_test, y_pred)
+print accuracy_score(y_test,y_pred)
 
 from matplotlib.colors import ListedColormap
 # Visualize the Training set results
