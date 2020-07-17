@@ -34,7 +34,7 @@ print(results)
 
 results_list =[]
 for i in range(0,len(results)):
-    results_list.append('RULE:'+ str(results[i][0]) + 'SUPPORRT:' + str(results[i][1]+'INFO:'+str(results[1][2])))
+    results_list.append('RULE:'+ str(results[i][0]) + 'SUPPORT:' + str(results[i][1]+'INFO:'+str(results[1][2])))
 print results_list
 
 # def inspect(results):
@@ -44,4 +44,4 @@ print results_list
 #     confidence = [result[2][0][2] for result in results]
 #     lifts = [result[2][0][3] for result in results]
 #     return list(zip(lhs, rhs, supports, confidence, lifts))
-# resultsInDataFrame = pd.DataFrame(inspect(results), columns = [' Left hand side', 'right hand side', 'supports', 'confidence', 'lifts'])
+resultsInDataFrame = pd.DataFrame(inspect(results), columns = [' Left hand side', 'right hand side', 'supports', 'confidence', 'lifts'])
