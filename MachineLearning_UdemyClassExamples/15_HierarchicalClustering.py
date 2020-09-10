@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Make each data point a single cluster - N clusters
 # Take the two closest data points and make them one cluster - N-1 clusters
 # Take the two closest clusters and make them one cluster - N-2 clusters
-# Repeat previous stem unitl there is only one cluster
+# Repeat previous stem until there is only one cluster
 
 # Distance between two clusters:
 # 1. Closest points

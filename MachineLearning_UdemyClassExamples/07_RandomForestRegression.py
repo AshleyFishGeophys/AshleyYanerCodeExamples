@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # 3. Choose the number Ntree of trees you want to build and repeat steps 1 and 2.
 # 4. For a new data point, make each one of your Ntree trees predict the value
 # of Y for the new data point in questions. Assign the new data point
-# the average aceoss all of the predicted Y values.
+# the average across all of the predicted Y values.
 
 path =r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 2 - Regression\Section 9 - Random Forest Regression\Python'
 

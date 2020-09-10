@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 pd.set_option('display.max_columns', 500)
 
-# More efficient and scalable version of Apriori.
+# More efficient and scalable version of Apriori. Mostly smaller datasets than apriori.
 # Set min support
 # Take all subsets in transactions having higher support than min support
 # Sort these subsets by decreasing value.

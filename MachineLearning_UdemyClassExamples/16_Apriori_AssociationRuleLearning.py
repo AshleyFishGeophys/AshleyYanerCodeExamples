@@ -3,9 +3,12 @@ import matplotlib.pyplot as plt
 pd.set_option('display.max_columns', 500)
 
 # Set a minimum support and confidence
+# Support is the proportion of transaction in the database in which the item X appears. It signifies the popularity of an itemset.
+# Confidence is the likelihood of item Y being purchased when item X is purchased.
 # Take all subsets in transactions having higher support than min support
 # Take all the rules of these subsets having higher confidence than min
 # Sort the rules by decreasing lift.
+# Lift is the likelihood of the itemset Y being purchased when item X is purchased while taking into account the popularity of  Y.
 # Slow due to the amount of combinations.
 
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 5 - Association Rule Learning\Section 28 - Apriori\Python'
@@ -37,11 +40,12 @@ for i in range(0,len(results)):
     results_list.append('RULE:'+ str(results[i][0]) + 'SUPPORT:' + str(results[i][1]+'INFO:'+str(results[1][2])))
 print results_list
 
-# def inspect(results):
-#     lhs = [tuple(result[2][0][0][0]) for result in results]
-#     rhs = [tuple(result[2][0][1][0]) for result in results]
-#     supports = [results[1] for result in results]
-#     confidence = [result[2][0][2] for result in results]
-#     lifts = [result[2][0][3] for result in results]
-#     return list(zip(lhs, rhs, supports, confidence, lifts))
+def inspect(results):
+    lhs = [tuple(result[2][0][0][0]) for result in results]
+    rhs = [tuple(result[2][0][1][0]) for result in results]
+    supports = [results[1] for result in results]
+    confidence = [result[2][0][2] for result in results]
+    lifts = [result[2][0][3] for result in results]
+    return list(zip(lhs, rhs, supports, confidence, lifts))
+
 resultsInDataFrame = pd.DataFrame(inspect(results), columns = [' Left hand side', 'right hand side', 'supports', 'confidence', 'lifts'])
