@@ -9,8 +9,8 @@ data = pd.read_csv(path + r'/Position_Salaries.csv')
 X = data.iloc[:,1:-1].values
 y = data.iloc[:,-1].values
 
-print data.head(10)
-print X, y
+# print data.head(10)
+# print X, y
 
 # Linear regression model for comparison to polynomial
 from sklearn.linear_model import LinearRegression
@@ -32,15 +32,15 @@ lr_poly.fit(X_poly,y)
 # plt.ylabel('Salary')
 # plt.show()
 
-# # Visualize Polynomial Regression results. Higher res
-# X_grid = np.arange(min(X), max(X), 0.1)
-# X_grid = X_grid.reshape((len(X_grid),1))
-# plt.scatter(X, y, color = 'red')
-# plt.plot(X_grid, lr_poly.predict(pr.fit_transform(X_grid)), color = 'blue')
-# plt.title('Polynomial regression model')
-# plt.xlabel('Position level')
-# plt.ylabel('Salary')
-# plt.show()
+# Visualize Polynomial Regression results. Higher res
+X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = X_grid.reshape((len(X_grid),1))
+plt.scatter(X, y, color = 'red')
+plt.plot(X_grid, lr_poly.predict(pr.fit_transform(X_grid)), color = 'blue')
+plt.title('Polynomial regression model')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
 
 # Predict new result
 # print lr.predict([[6.5]])

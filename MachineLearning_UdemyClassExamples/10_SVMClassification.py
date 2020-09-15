@@ -6,12 +6,12 @@ path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datas
 
 df = pd.read_csv(path + r'\Social_Network_Ads.csv')
 
-print df.head(25)
+print(df.head(25))
 
 X = df.iloc[:,2:-1].values
 y = df.iloc[:,-1].values
 
-# print X, y
+print(X, y)
 
 # Maxiumum margin hyperplane separates classes.
 # Positive and negative hyperplanes.
@@ -45,8 +45,8 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
 am = accuracy_score(y_test, y_pred)
-print cm
-print am
+# print cm
+# print am
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap

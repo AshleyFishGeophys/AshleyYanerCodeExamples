@@ -8,7 +8,7 @@ import numpy as np
 
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 2 - Regression\Section 7 - Support Vector Regression (SVR)\Python'
 data = pd.read_csv(path + '\Position_Salaries.csv')
-print data.head(10)
+# print data.head(10)
 
 X = data.iloc[:,1:-1].values
 y = data.iloc[:,-1].values
@@ -38,7 +38,7 @@ regressor.fit(X,y)
 
 # Predict new result
 # Need to reverse feature scaling to see the correct prediction relative to original data
-print sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
+# print sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
 
 # # Plot to SVR
 # # SVR didn't catch the outlier at the end

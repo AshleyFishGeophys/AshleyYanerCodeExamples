@@ -45,7 +45,7 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(),[3])], remainder='passthrough')
 # X = np.array(ct.fit_transform(X))
 X = ct.fit_transform(X)
-# print X
+# print(X)
 
 # No need to apply feature scaling
 
@@ -62,11 +62,11 @@ lr.fit(X_train,y_train)
 # X_pred = lr.predict(y_test)
 y_pred = lr.predict(X_test)
 np.set_printoptions(precision=2)
-# print np.concatenate((y_pred.reshape(len(y_pred),1),y_test.reshape(len(y_test),1)), 1)
+print(np.concatenate((y_pred.reshape(len(y_pred),1),y_test.reshape(len(y_test),1)), 1))
 
 plt.scatter(y_pred, y_test)
 plt.show()
 
 # Evaluate the Model performance
 from sklearn.metrics import r2_score
-print r2_score(y_test, y_pred)
+print(r2_score(y_test, y_pred))

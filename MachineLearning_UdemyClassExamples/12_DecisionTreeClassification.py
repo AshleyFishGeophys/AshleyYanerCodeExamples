@@ -6,12 +6,12 @@ import numpy as np
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 3 - Classification\Section 19 - Decision Tree Classification\Python'
 
 df = pd.read_csv(path+r'/Social_Network_Ads.csv')
-print df.head()
+# print df.head()
 
 X = df.iloc[:,2:-1].values
 y = df.iloc[:,-1].values
 
-print y
+# print y
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
@@ -30,12 +30,12 @@ classifier.fit(X_train, y_train)
 
 # Predict
 y_pred = classifier.predict(X_test)
-print classifier.predict(sc.transform([[30,87000]]))
+print(classifier.predict(sc.transform([[30,87000]])))
 
 # model evaluation
 from sklearn.metrics import confusion_matrix, accuracy_score
-print confusion_matrix(y_test, y_pred)
-print accuracy_score(y_test, y_pred)
+print(confusion_matrix(y_test, y_pred))
+print(accuracy_score(y_test, y_pred))
 
 from matplotlib.colors import ListedColormap
 # Visualize the Training set results

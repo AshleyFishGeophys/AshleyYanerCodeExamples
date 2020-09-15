@@ -6,7 +6,7 @@ import numpy as np
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 3 - Classification\Section 15 - K-Nearest Neighbors (K-NN)\Python'
 df = pd.read_csv(path+r'\Social_Network_Ads.csv')
 
-print df.head()
+print(df.head())
 
 X = df.iloc[:,2:-1].values
 y = df.iloc[:,-1].values
