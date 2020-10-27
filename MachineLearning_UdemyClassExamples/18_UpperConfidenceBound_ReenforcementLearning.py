@@ -54,8 +54,8 @@ for n in range(0, N):
     sums_of_rewards[ad] += reward
     total_reward += reward
 
-print sums_of_rewards
-print ads_selected
+print(sums_of_rewards)
+print(ads_selected)
 
 # Visualising the results
 plt.hist(ads_selected)

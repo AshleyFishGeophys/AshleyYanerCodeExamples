@@ -31,8 +31,8 @@ y_pred = classifier.predict(X_test)
 
 # Confusion matrix and accuracy
 from sklearn.metrics import confusion_matrix, accuracy_score
-print confusion_matrix(y_test, y_pred)
-print accuracy_score(y_test, y_pred)
+print(confusion_matrix(y_test, y_pred))
+print(accuracy_score(y_test, y_pred))
 
 
 # Visualising the Training set results

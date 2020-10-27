@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 4 - Clustering\Section 25 - Hierarchical Clustering\Python'
 
 df = pd.read_csv(path + r'\Mall_Customers.csv')
-print df.head()
+print(df.head())
 
 # No dependent variable, here.
 X = df.iloc[:,3:].values
@@ -34,7 +34,7 @@ plt.show()
 from sklearn.cluster import AgglomerativeClustering
 hc = AgglomerativeClustering(n_clusters=5, affinity = 'euclidean', linkage = 'ward')
 y_pred = hc.fit_predict(X)
-print y_pred
+print(y_pred)
 
 plt.scatter(X[y_pred == 0, 0], X[y_pred == 0, 1], s = 100, c = 'red', label= 'Cluster 1')
 plt.scatter(X[y_pred == 1, 0], X[y_pred == 1, 1], s = 100, c = 'blue', label= 'Cluster 2')

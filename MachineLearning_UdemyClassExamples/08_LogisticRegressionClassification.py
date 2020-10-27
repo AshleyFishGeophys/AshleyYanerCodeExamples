@@ -5,7 +5,7 @@ import numpy as np
 path = r'D:\Udemy\MachineLearning\original\Machine Learning A-Z (Codes and Datasets)\Part 3 - Classification\Section 14 - Logistic Regression\Python'
 
 df = pd.read_csv(path + r'\Social_Network_Ads.csv')
-# print df.head(25)
+print(df.head(25))
 
 X = df.iloc[:, [2,3]].values
 y = df.iloc[:, -1].values
@@ -37,8 +37,8 @@ y_pred = classifier.predict(X_test)
 # Accuracy of model
 from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
-print cm
-print accuracy_score(y_test, y_pred)
+print(cm)
+print(accuracy_score(y_test, y_pred))
 
 # Visulaizing the training
 from matplotlib.colors import ListedColormap

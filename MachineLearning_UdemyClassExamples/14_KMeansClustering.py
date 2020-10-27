@@ -35,7 +35,7 @@ for i in range(1,11):
 kmeans = KMeans(n_clusters=5, random_state=42)
 # create dependent variable
 y_pred = kmeans.fit_predict(X)
-print y_pred
+print(y_pred)
 
 
 plt.scatter(X[y_pred == 0, 0], X[y_pred == 0, 1], s = 100, c = 'red', label= 'Cluster 1')

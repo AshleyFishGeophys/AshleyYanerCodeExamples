@@ -37,7 +37,7 @@ X = data.iloc[:,:-1].values
 y = data.iloc[:,-1].values
 
 pd.set_option('display.max_rows',100)
-# print data
+print(data)
 
 # Encode categorical data. Dummy variables
 from sklearn.compose import ColumnTransformer
